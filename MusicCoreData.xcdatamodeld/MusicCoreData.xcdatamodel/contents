@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
+    <entity name="Genre" representedClassName="GenreMO" syncable="YES">
+        <attribute name="genreImageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genreTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="song" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="genre" inverseEntity="Song" syncable="YES"/>
+    </entity>
+    <entity name="Song" representedClassName="SongMO" syncable="YES">
+        <attribute name="songImageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genre" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Genre" inverseName="song" inverseEntity="Genre" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Genre" positionX="459" positionY="38" width="128" height="88"/>
+        <element name="Song" positionX="-45" positionY="74" width="128" height="90"/>
+    </elements>
+</model>
